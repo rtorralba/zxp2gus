@@ -1,0 +1,14 @@
+README.md
+setup.py
+zxp2gus/__init__.py
+zxp2gus/cli.py
+zxp2gus/ioUser.py
+zxp2gus/zxbasic.py
+zxp2gus/zxlib.py
+zxp2gus/zxp2png.py
+zxp2gus.egg-info/PKG-INFO
+zxp2gus.egg-info/SOURCES.txt
+zxp2gus.egg-info/dependency_links.txt
+zxp2gus.egg-info/entry_points.txt
+zxp2gus.egg-info/requires.txt
+zxp2gus.egg-info/top_level.txt

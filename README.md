@@ -1,23 +1,26 @@
 # zxp2gus
 
-Simple script to convert ZX Paintbrush Images (zxp) into basic file for [Boriel's ZX Basic](https://zxbasic.readthedocs.io/en/docs/) and [GuSprites](https://github.com/gusmanb/GuSprites) sprite library
+Simple command to convert ZX Paintbrush Images (zxp) into basic file for [Boriel's ZX Basic](https://zxbasic.readthedocs.io/en/docs/) and [GuSprites](https://github.com/gusmanb/GuSprites) sprite library
 
-### Requeriments
-python 3.7.7 nor higher
+## Install
 
-```bash
-pip install -r requeriments.txt
-```
+pip install zxp2gus
 
-### Run
-
-#### Python locally
-Put in paperValues.txt paper value for each tile
+## Run
 
 ```bash
-python img2zx.py -i tiles.png -p paperValues.txt -o tiles.bas 
-```
-#### Docker
-```bash
-docker run -it -u $(id -u):$(id -g) -v ${PWD}:/share rtorralba/img2zxbasic -i /share/tiles.png -p /share/paperValues.txt -o /share/tiles.bas
+usage: zxp2gus [-h] [-t ITYPE] [-i INPUT] [-o OUTPUT] [-f FORMAT]
+
+Process some arguments.
+
+options:
+  -h, --help            show this help message and exit
+  -t ITYPE, --itype ITYPE
+                        Type of input
+  -i INPUT, --input INPUT
+                        Input file
+  -o OUTPUT, --output OUTPUT
+                        Output file
+  -f FORMAT, --format FORMAT
+                        Format of the output
 ```

@@ -1,0 +1,2 @@
+[console_scripts]
+zxp2gus = zxp2gus.cli:main
