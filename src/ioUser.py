@@ -1,4 +1,5 @@
-import sys, getopt
+import argparse
+import sys
 import os.path
 import cv2
 import numpy
@@ -10,27 +11,20 @@ def printHelp():
     print("Formats: png, bin")
 
 def validateArguments(argv):
-    result = {}
-    try:
-        options = getopt.getopt(argv, "?t:i:o:f:", ["help", "itype=", "input=", "output=", "format="])
-    except getopt.GetoptError:
-        printHelp()
-        sys.exit(2)
+    parser = argparse.ArgumentParser(description='Process some arguments.')
+    parser.add_argument('-t', '--itype', type=str, help='Type of input')
+    parser.add_argument('-i', '--input', type=str, help='Input file')
+    parser.add_argument('-o', '--output', type=str, help='Output file')
+    parser.add_argument('-f', '--format', type=str, help='Format of the output')
 
-    for arg, val in options[0]:
-        if arg in ("-?", "--help"):
-            printHelp()
-            sys.exit()
-        elif arg in ("-t", "--itype"):
-            result["type"] = val
-        elif arg in ("-i", "--input"):
-            result["input"] = val
-        elif arg in ("-o", "--output"):
-            result["output"] = val
-        elif arg in ("-f", "--format"):
-            result["format"] = val
-        else:
-            print("Unrecognized argument '{}' with value '{}'".format(arg, val))
+    args = parser.parse_args(argv)
+
+    result = {
+        "type": args.itype,
+        "input": args.input,
+        "output": args.output,
+        "format": args.format
+    }
 
     return result
 

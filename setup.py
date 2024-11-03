@@ -18,4 +18,8 @@ setup(
         zxp2gus=zxp2gus.cli:main
     ''',
     url = 'https://github.com/rtorralba/zxp2gus',
+    install_requires=[
+        'numpy',
+        'opencv-python'
+    ],
 )
