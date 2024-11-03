@@ -3,3 +3,6 @@ __pycache__
 *.bin
 *.png
 *.zxp
+build/*
+dist/*
+zxp2gus.egg-info/*
