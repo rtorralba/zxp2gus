@@ -6,7 +6,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='zxp2gus',
-    version='0.3',
+    version='0.4',
     author='Raül Torralba',
     description='Convert ZX Paintbrush files to GuSprites ZXBasic code',
     long_description=README,
